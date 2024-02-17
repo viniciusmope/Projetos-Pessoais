@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Where in the world?</title>
+<link href="style.css" rel="stylesheet">
+<style>
+</style>
+</head>
+<body>
+    <div id="top-bar">
+        <div id="app-name">Where in the world?</div>
+        <label for="theme">
+            <div class="mode" id="light">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                <div>Dark Mode</div>
+            </div>
+            <div class="mode" id="dark">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M256 48v48M256 416v48M403.08 108.92l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48M96 256H48M403.08 403.08l-33.94-33.94M142.86 142.86l-33.94-33.94"/><circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/></svg>
+                <div>Light Mode</div>
+            </div>
+        </label>
+    </div>
+    <div id="search-filter-bar">
+        <div id="search-bar">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+            <input type="search" placeholder="Search for a country...">
+        </div>
+        <div id="filter">
+            <div id="filter-bar">
+                <div>
+                    <input type="radio" name="filter" id="all" checked>
+                    <span>Filter by Region</span>
+                    <input type="radio" name="filter" id="Africa">
+                    <span>Africa</span>
+                    <input type="radio" name="filter" id="Americas">
+                    <span>Americas</span>
+                    <input type="radio" name="filter" id="Asia">
+                    <span>Asia</span>
+                    <input type="radio" name="filter" id="Europe">
+                    <span>Europe</span>
+                    <input type="radio" name="filter" id="Oceania">
+                    <span>Oceania</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg>
+            </div>
+            <div id="filter-container" stat="0">
+                <label for="all">All</label>
+                <label for="Africa">Africa</label>
+                <label for="Americas">Americas</label>
+                <label for="Asia">Asia</label>
+                <label for="Europe">Europe</label>
+                <label for="Oceania">Oceania</label>
+            </div>
+        </div>
+    </div>
+    <div id="frame">
+<!-- 
+        <div class="country" region="Europe">
+            <img src="https://flagcdn.com/w320/de.png" alt="Germany">
+            <div class="info">
+                <h1>Germany</h1>
+                <p>Population: 81,770,900</p>
+                <p>Region: Europe</p>
+                <p>Capital: Berlin</p>
+            </div>
+        </div> -->
+
+    </div>
+    <div id="loading">
+        <div class="circle" id="large">
+            <div class="circle">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+    <div id="country-detail">
+        <div id="back">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
+            <span>Back</span>
+        </div>
+        <div id="detail">
+            <div id="img-container">
+                <img src="https://flagcdn.com/w320/be.png" alt="current-country">
+            </div>
+            <div id="information">
+                <h1 id="name">Belgium</h1>
+                <div>
+                    <ul>
+                        <li>Native Name: <span id="nativename">Belge</span></li>
+                        <li>Population: <span id="population">11.319.511</span></li>
+                        <li>Region: <span id="region">Europe</span></li>
+                        <li>Sub Regions: <span id="Sub-region">Western Europe</span></li>
+                        <li>Capital: <span id="Capital">Brussels</span></li>
+                        <li>Top Level Domains: <span id="Domains">.be</span></li>
+                        <li>Currencies: <span id="currencies">Euro</span></li>
+                        <li>Languages: <span id="Languages">Dutch, French, German</span></li>
+                    </ul>
+                </div>
+                <div id="borders">
+                    Border Countries: <span id="borderlist"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="theme" checked>
+</body>
+<script src="script.js"></script>
+</html>
